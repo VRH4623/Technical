@@ -1,0 +1,333 @@
+										NETWORKING
+									------------------------
+
+
+* Computer -> commonly oriented machince particularly used for education and training, education and research.
+* Network -> computers connected together
+* Internet -> collection of computer networks.
+* WWW -> information system that has access to any documents or resources that are identified by uniform resource locators(url).
+* computers are conncected physically through -> optical fibre cables, coaxial cables. wireless -> bluetooth, wifi.
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+									ISP (internet service provider)
+											|
+										   Modem/Router
+											|
+									----------------------------------
+									|		|		 |
+								     Device-1        Device-2        Device-3
+
+* this isp has global ip address.
+* all device connected to this modem has same IP address
+* the ip address of the devices are known as local ip addresses.
+* Modem assigns IP addresses ussing the DHCP(Dynamic host configuration protocol)
+* any device send request like google.com to modem, it sends to isp. Later, google send response to isp and it returns the response to the router, and it decides who had the request using NAT(Network access translator)
+* IP address decides which device to send the data, but the application to send the data of the device is done through PORTS(Port numbers)
+* When two friends are communicating via internet, IP  address decides where computers are located, and port numbers denoting which application used to communicate.
+* Ports -> 16 bit numbers (16 cells, where every cell contains 0/1)
+* total port numbers possible are -> 2^16 (65000)
+* HTTP -> port 80
+* ports from 0 -1023 -> reserved ports
+* ports 1024 - 49152 -> specified applications
+* remaining -> we can use
+* tier-1 ISP - TATA
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Datas are transferred through packets , not whole.
+
+CLIENT-SERVER ARCHITECTURE :
+-----------------------------
+* typing google.com and enter , it sends (request) to server and google send back (response) to computer.
+		|
+	     client					|
+						     server	
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+PROTOCOLS : (rules setup by someone, how a particular data to be sent)
+------------
+* HTTP(hyper text transfer protocol) 
+	-> defines how data transfered,client-server protocol that tells how request, response sent and recieved, stateless protocol. 
+	-> Methods : GET, POST, PUT, DELETE
+* DHCP(dynamic host configuration protocol) -> ip address allocated to devices.
+* FTP(file transfer protocol) -> to transfer files.
+* SMTP(simple mail transfer protocols) -> to transfer mails/
+* POP3(post office protocol) -> to revieve email.
+* IMAP(intenet message access protocol) -> to recieve email.
+* SSH(secure shell) -> login to terminal of someone else computer
+* TCP(transmission control protocol) :
+	-> tcp segmnts data recieved from application layer.
+	-> also collect data from network layer.
+	-> congestion control, error control.
+	-> maintains order of data using sequence numbers.
+	-> connection oriented, full-duplex(simultaneous transfer of files).
+	-> 
+* UDP(user datagram protocol) :
+	-> data may/maynot be delivered, connectionless protocol,use checksums
+	-> udp packet's header consists of source,destnation port no(4bytes), length od datagram(2 bytes), checksum(2 bytes), total size of data is 2^16-8.
+
+* DNS(domain name system) :
+	-> when we type www.google.com, http protocol take that url and find the IP address of goofle through DNS.
+	-> mail.google.com. here, mail -> sub-domain, google -> second-level domain, .com -> top level domain
+	-> top level domains -> .com, .io, .org, .edu
+
+* 3-WAY HANDSHAKE PROTOCOL :
+	-> client send (SYN) and (SEQ.NO) and to server.
+	-> server send (ACK), (SEQ.NO) and (ACK.NO) to client. here, ack.no = (seq.no + 1)
+	-> client send (ACK), (SEQ.NO) and (ACK.NO) again to server.  
+
+* IP ADDRESS :
+	-> every single device in internet to talk to each other they have ip adress.
+	-> format is X.X.X.X ->every single x has value range from 0-255
+	-> for example in 192.168.3.130. here, first 3 are network address/subnet id and the last one is device address/host id. 
+	-> subnetting -> blocks of IP addresses are assigned to the ISP
+	-> Classes : 
+		* A = 0.0.0.0   - 127.255.255.255
+		* B = 128.0.0.0 - 191.255.255.255
+		* C = 192.0.0.0 - 223.255.255.255
+		* D = 224.0.0.0 - 239.255.255.255
+		* E = 240.0.0.0 - 255.255.255.255 
+	-> Subnet masking -> masking the network part of IP address and leave us to use the host part 
+	-> IPV4 -> 32 bit, 4 words
+	-> IPV6 -> 128 bits,8 words all are hexadecimal .Not backward compatible, IPS's would have to shift and lot of hardware works. 
+
+
+STATUS CODES :
+---------------
+* 1XX -> Informational category
+* 2XX -> Success 
+* 3XX -> Re-direction
+* 4XX -> Client Error
+* 5XX -> Server Error
+
+COOKIES :
+--------
+* unique string.
+* stored in client browser, when a website is visited.
+* whenever new request sent in HTTP, the header contains cookies and server comes to know who is contacting.
+* third-party cookies -> cookies that are set for the URL's that we do not vists.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+TYPES OF NETWORK :
+------------------
+ i) LAN :
+---------
+* Local area network.
+* small house/office.
+* ethernets, wifi
+
+ii) MAN :
+---------
+* Metropolitan Area network.
+* accross cities.
+
+iii) WAN :
+----------
+* Wide area network
+* accross countries
+* through optical fibre cables.
+* SONET -> Synchronous optical networking(carries data using optical fibre cables to cover large distances)
+* FRAME RELAY -> a way to connect LAN to WAN
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+COMPONENTS OF NETWORK :
+-----------------------
+i) MODEM :
+---------
+* convert digital signals into analog/electric signals and vice-versa, so we can transfer it through the telephonic lines to the other modem at reciever.
+* connected to ISP.
+
+ii) ROUTER :
+------------
+* a device like switch that routes the data packets based on the IP addresses.
+* network layer device.
+* conncet LAN and WAN and have dynamicall updating routin table based on which they make decisions on routing data packets.
+
+iii) REPEATER :
+---------------
+* operates at physical layer.
+* regenerate signal over same network before signals becomes weak or corrupted.
+* they donot amplify signal
+
+iv) HUB :
+---------
+* multiport repeater
+* conncets multiple wires coming from different  branches
+* cannot filter data
+* active hub -> have own power supply and can clean, boost and relay signal along netwwork. Used to extend maximum distance betweeen nodes.
+* passive hub -> collect wiring from nodes and power supply from active hub. No cleaning, boosting of signals and cant be used for extend distances.
+
+v) BRIDGE :
+-----------
+* operates at datalink layer.
+* repaeter with filtering content by reading MAC address of source and destinaiton
+* interconnecting two LAN working on same protocol
+* transparent bridge -> stations are completely unaware of bridge's existence.
+* source routing bridge -> routing operation is done by source station and frame specifies which route to follow.
+
+vi) SWITCH :
+------------
+* multiport bridge with buffer and design to boost its efficiency and perfomance.
+* data link layer.
+* do error checking before dorwarding data to transmit only good data to correct ports.
+
+vii) GATEWAY :
+--------------
+* connect to network together.
+* work as messenger agents, collect data from one system, interpret it and transmit ot another system
+* called protocol converters and operate at network layer.
+* more complex than switch and router,
+
+viii) BROUTER :
+---------------
+* bridgin router.
+* work either at data link/network layer.
+* filter LAN traffic
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TOPOLOGIES :
+------------
+
+i) BUS :
+--------
+* every  system connected to a line.
+* if one link gets broken , the entire will be spoiled.
+* since it is conncectd through cable, only one can send data at particular time.
+
+
+				__A________________C__________E_
+					B               D
+
+ii) RING :
+----------
+* computer connceted in ring each other.
+* every sytem communicates with one another.
+* if one cable break, data transfer failed, unecessary calls(for A-F, it should go through all)
+
+				A - B
+			      /      \
+			    G	      C
+			    | 	      |
+			    F-  E  -  D  
+iii) STAR :
+-----------
+* one central device, all computers are conncted to it.
+* if central device fails,network go down.
+
+				A
+				|   
+			  D - CENTRAL  B
+				|	
+				C
+
+iv) TREE :
+----------
+* combination of bus and star.
+
+v) MESH :
+---------
+* every single computer is connected to every singl computer
+* expensive, less scalable,
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+OSI MODEL : (open systems interconnection) 
+----------
+
+						APPLICATION LAYER ---------- IMPLEMENTATION (HTTP,DNS,TELNET)
+							|
+						PRESENTATION LAYER --------- ENCRYPTION (SSL)
+							|
+						  SESSION LAYER ------------ AUTHENTICATION, AUTHORIZATION ()
+							|
+						TRANSPORTATION LAYER ------- SEGMENTATION (UDP,TCP)
+							|
+						  NETWORK LAYER ------------ LOGICAL IP ADDRESSONG (IPV4,IPV6)
+							|
+						   DATALINK LAYER ---------- MAC ADDRESSING 
+							|
+						  PHYSICAL LAYER ------------ RAW DATA
+
+i) APPLICATION LAYER :
+----------------------
+* implementeed in software
+* web browsers.
+
+ii) PRESENTATION LAYER :
+------------------------
+* take data from application layer and convert it into binary format -> encryption, abstraction
+
+iii) SESSION LAYER :
+------------------------	
+* helps in setting and managing connections and it enables send and recieve of data -> authentication, authorization	
+
+iv) TRANSPORTATION LAYER :
+------------------------	
+* data recieved from session layer convered into small segments that segments contain source,destination port number and sequence number
+
+v) NETWORK LAYER :
+------------------
+* transmission of recieved data segments from one computer to other computer that is llocated in different network. here router comes. IP address used for  data packets to reach correct destination
+
+vi) DATALINK LAYER :
+------------------
+* allows directly communicate with hosts, recieve data packets from network layer and it contains IP address of host and destination.
+* MAC -> media access control
+
+vii) PHYSICAL LAYER :
+---------------------
+* transmits bits, electric signals, cables
+* raw data
+				
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TCP/IP MODEL :
+-------------
+* known as IP suite
+* similar to OSI model. but layers are reduced.
+
+		
+						APPLICATION LAYER ---------- USER INTERACTION (HTTP,DNS,TELNET)
+							|
+						TRANSPORTATION LAYER ------- SEGMENTATION (UDP,TCP)
+							|
+						  NETWORK LAYER ------------ LOGICAL IP ADDRESSONG (IPV4,IPV6)
+							|
+						   DATALINK LAYER ---------- MAC ADDRESSING 
+							|
+						  PHYSICAL LAYER ------------ RAW DATA	
+
+
+i) APPLICATION LAYER :
+----------------------
+* users interaction (whatsapp,instagram) on devices
+* collection of servers -> data centres
+* ping -> it measures the round trip time for message send from host to destination and code back, this entire known as ping time
+* we cannot reduce ping time. because, signals are traveling at speed of light through wires, cables.
+* client-server architecture
+* peer-peer -> various devices connected with each other, no common server. every single computer can be client and server/
+
+ii) TRANSPORT LAYER : 
+---------------------
+* transfer of data from network to application, datas are in segments.
+* also takes care of conogestion control -> manages traffic, by congestion contol algorithms.
+* take care of CHECKSUM -> calculating a value using the data through some algorithm.
+* timers -> to know datas are correctly reached destination
+
+iii) NETWORK LAYER :
+---------------------
+* transfer of data from one computer to another computer.
+* datas are in packets that contains network layer address of the destination.
+
+iv) DATALINK LAYER :
+--------------------
+* it is responsible for transferrig the data packets rev=cieeved from the network layaer over a physical link.
+* 
+ 
+
+
