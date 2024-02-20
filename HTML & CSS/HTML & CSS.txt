@@ -1,0 +1,136 @@
+											HTML
+										-------------------
+
+
+* doctype -> defines the version of html
+* html -> latest html version
+* commennt -> <!--hello-->
+* html attributes -> used inside opening opening tag of element to control its behaviour.
+* attributes paired with values and inside quotation marks, like img src = "httpss", here src is attribut and link is vale
+* alt attribute -> describe picture with text. displayed if image fails to load.
+* target = blank -> load in new page
+* putting # inside href -> stores link as text, but doesnt link anything, be in same page
+* placeholder -> text inside, required -> must fill the field
+* radio buttons should have same name to select and unselect other, also select when text is clicked should be done thru label.
+* for in label -> to create relationshp between the label adn the hild element.
+* every label has for in it and should be same as name of input
+* every input has id, type, name
+* checked is a attribute with no value, to autoselect a content for  every refresh.
+* div elements -> container for other elements, used in css for styling 
+* lang -> eng is to set the values used as englosh language.
+* id -> unique, class -> can reuse.
+
+
+
+
+
+											CSS
+										-----------------------
+comment -> /*hello*/
+
+* inline css -> diretly in html element (not sugested) :
+    <h1 style="color: red;"> inline - Helllo World</h1>
+
+* internal css -> using <style>tags within a single document
+    <style type="text/css">
+        h2{
+            color:blue
+        }
+    </style>
+    <h2> internal - Hello World</h2>
+
+* external css -> lainking external .css file (preferred)
+    <link rel="stylesheet" href="style.css">
+	h3{
+    	color:brown
+	}
+
+selectors : 
+--------------
+ a { background-color:yellow;}
+___________________________________________________________________
+|a -> selector , we can use (. or #) according to the class or id   |
+|{ -> declaration start					           |
+|background-color -> property 					   |
+|: -> property/value seperator					   |
+|yellow -> value						           |
+|; -> declaration separator					   |
+|} -> declaration end                                               |
+--------------------------------------------------------------------
+
+Colors : 
+--------
+* color -> color names(red,blue,green), html5 color names(coral), hexadecimal(#00f00), rgb(0,0,255)
+* background color -> whole color of bg will change
+* color -> text color
+
+Fonts : 
+-------
+* font-family : Arial, Helvetica, sans-serif -> font type of which font
+* font-size : 16px -> size of the fonts
+* font-weight : normal -> weight of the font
+* instead of declaring each line by line
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+we can declare it commonly as,
+    font:normal 16px Arial, Helvetica, sans-serif
+
+Lines :
+-------
+* line-height:1.6em -> for heoght of the lines inbetween the paragraph
+--
+for class we should use (.class)
+for id we should use (#id)
+
+Container :
+-----------
+* margin:0 -> margin remove the extra side spaces in the webpage, except the top because headings have margins by default.
+* margin:auto -> to push a whole container in even amount of space around the container
+* width:80px -> the width of the container is 80px, but it will not convinient. So, use width:80% while sliding page
+
+Box Model :
+-----------
+
+				__________________________________________________________
+							top margin
+					--------------------------------------------
+							top border
+						-----------------------------
+						        top padding
+						     ___________________
+							  content
+						     ____________________
+						       bottom padding
+            					-----------------------------
+						       bottom border
+					----------------------------------------------
+						       bottom margin
+				_____________________________________________________________	
+
+* margin : 5px 10px 5px 10px -> top, right, bottom, left
+* margin : 5px 10px -> if top,bottom and right,left are same 
+* same for padding, margin
+
+Link : 
+-------
+* a:hover{color:red} -> placing the mosue on a link, color is red
+* a:active{color:green} -> when link clicked the color becomes green
+* a:visited{color:blue} -> when link is visited , it turns blue colour
+---
+
+* display:block -> display in new line
+* box-sizing:borderbox -> this is to set the box evenly.
+
+Positioning :
+-------------
+
+* static -> default, no position can be assigned
+* relative -> element positioned relative to its normla position(top,left,right,bottom)
+* absolute -> allow to target whatever psotition we want inside a relative element
+* fixed -> how much we scroll ,it remains same
+* initil -> sets property to default value.
+* inherit -> will inherit property of parent element
+			
+
+
