@@ -8,7 +8,7 @@
 * WWW -> information system that has access to any documents or resources that are identified by uniform resource locators(url).
 * computers are conncected physically through -> optical fibre cables, coaxial cables. wireless -> bluetooth, wifi.
 
--------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 									ISP (internet service provider)
 											|
 										   Modem/Router
@@ -31,52 +31,123 @@
 * ports 1024 - 49152 -> specified applications
 * remaining -> we can use
 * tier-1 ISP - TATA
+* nodes -> Any communicating device in a network is called a Node. Node is the point of intersection in a network. It can send/receive data and information within a network. Examples of the node can be computers, laptops, printers, servers, modems, etc.
+* links ->  A link or edge refers to the connectivity between two nodes in the network. It includes the type of connectivity (wired or wireless) between the nodes and protocols used for one node to be able to communicate with the other.
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-* Datas are transferred through packets , not whole.
+PACKETS : 
+---------
+* A packet is a unit of data transmitted over a network.
+* It contains both the data being transferred and the necessary control information, such as source and destination addresses.
+* packet include the header, payload, and sometimes a trailer. The heade->source and destination addresses, payload->actual data being transmitted.
+* packets are routed using the ip adress that are done by router through the decisions made by the routng table.
+* packets can be lost or corrupted, this can be addressed by error detection, checksum.
+* packets-ip and mframes - mac	
 
-CLIENT-SERVER ARCHITECTURE :
------------------------------
-* typing google.com and enter , it sends (request) to server and google send back (response) to computer.
-		|
-	     client					|
-						     server	
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 PROTOCOLS : (rules setup by someone, how a particular data to be sent)
 ------------
-* HTTP(hyper text transfer protocol) 
-	-> defines how data transfered,client-server protocol that tells how request, response sent and recieved, stateless protocol. 
+* HTTP(hyper text transfer protocol)
+	-> used by web browsers like www
+	-> defines how data and it's format to be transfered,client-server protocol that tells how request, response sent and recieved
+	-> stateless protocol. 
 	-> Methods : GET, POST, PUT, DELETE
-* DHCP(dynamic host configuration protocol) -> ip address allocated to devices.
-* FTP(file transfer protocol) -> to transfer files.
-* SMTP(simple mail transfer protocols) -> to transfer mails/
-* POP3(post office protocol) -> to revieve email.
-* IMAP(intenet message access protocol) -> to recieve email.
-* SSH(secure shell) -> login to terminal of someone else computer
+	-> built on tcp
+	-> port 80
+* HTTPS(hyper text transfer protocol secure)
+	-> advanced and secure version of http
+	-> on top of http, ssl/tls is used.
+	-> secure communication
+	-> encrypts data using TLS(transport layer security) or SSL(secure socket layer)
+	-> protects from eavesdropping, man-in-the-middle attack
+	-> port 443
+* TLS(transport layer security)
+	-> cryptographic protocol for securre transmission of data
+	-> successor to ssl
+* SSL(secure socket layer)
+	-> earliest cryptographic protocol used
+	-> developed by NETSCAPE in mid 1900
+* DHCP(dynamic host configuration protocol) 
+	-> auto-configure devices on IP networks enabling them to use the TCP and UDP-based protocols.
+	-> It helps to get the subnet mask, IP address and helps to resolve the DNS.
+	-> it eliminates need of manual IP address configuration, reduces risk of address conflicts.
+	-> port 67
+* FTP(file transfer protocol) 
+	-> appplication layer protocol
+	-> It can also be used to download files from remote servers to your computer.
+	-> to transfer files between client and server on a computer network.
+	-> ftp transmits data including username, password, in plain text which case pose security issues unless sent by secure protocol ftps 
+	-> port 27
+* TFTP(trivial file transfer protocol) 
+	-> simple and lightweight ftp for transferrring files between network devices.
+	-> operates at application layer and used in scenarios where more feature-rich protocol like ftp is not required.
+	-> used for bootstrapping devices for boot process.
+	-> often used in embedded systems, network appliances and firmware updates where its is sufficient.
+* SMTP(simple mail transfer protocols) 
+	-> to transfer mails between server on internet
+	-> SMTP sets the rule for communication between servers. 
+	-> text base protocol that uses commands and responses to transfer. This set of rules helps the software to transmit emails over the internet.
+	-> port 25
+* POP3(post office protocol) 
+	-> protocol used by clients to revieve email from a mail server over TCP/IP connection.
+* IMAP(intenet message access protocol) 
+	-> accessing and managing emails stored in remote servers, from mutiple devices or locations
+	-> flexible
+* SSH(secure shell) 
+	-> cryptographic network protocol used for secure communication and remote access to devices over unsecured network.
+	-> provides strong encryption, authentication, and integrity protection
 * TCP(transmission control protocol) :
+	-> it is a set of rules that decides how a computer connects to the Internet and how to transmit the data over the network. 
+	-> It creates a virtual network when more than one computer is connected to the network and uses the three ways handshake model to establish the connection which makes it more 	reliable.
 	-> tcp segmnts data recieved from application layer.
 	-> also collect data from network layer.
 	-> congestion control, error control.
 	-> maintains order of data using sequence numbers.
 	-> connection oriented, full-duplex(simultaneous transfer of files).
-	-> 
 * UDP(user datagram protocol) :
-	-> data may/maynot be delivered, connectionless protocol,use checksums
+	-> Mainly, it is used for multicasting and broadcasting. 
+	-> Its functionality is almost the same as TCP/IP Protocol except for the three ways of handshaking and error checking. 
+	-> It uses a simple transmission without any hand-shaking which makes it less reliable.
+	-> data may/maynot be delivered, connectionless protocol.
 	-> udp packet's header consists of source,destnation port no(4bytes), length od datagram(2 bytes), checksum(2 bytes), total size of data is 2^16-8.
 
+* TCP VS UDP : 
+	-> connection oriented, no connnection oriented
+	-> more reliable, less reliable
+	-> slower transmission, fast transmission
+	-> packets can be preserved  or rearranged, packets order is not fixed
+	-> uses 3 way handshake for connection , not use
+	-> packets are heavy0wweight, less weight
+	-> offers error checking mechanism, no error checking
+	-> used by (http,https,smtp), used by (dns,tftp)
+* PPP(point-to-point) 
+	-> establishing a direct connection between two nodes in a network
+	-> through telephone lines or serial cables
+* ARP(address resolution protocol)
+	-> network level protocol
+	-> protocol used to map an ip address to mac address in local network	
+	-> It can also be used to get the MAC address of devices when they are trying to communicate over the local network.
+	-> It is essential for the proper functioning of protocols like Ethernet and IPv4 in local area networks (LANs).
+* ICMP(internet control message access protocol)
+	-> network layer protocol used for error handling
+	-> used by routers for diagnsoing network connecting issues
+	-> used for sending erroe messages and operational infromation betweend devices in an IP network.
+	-> essential for troubleshooting, monitoring and error handling
+	-> provies feedback about network conditions and facilitates reliable delivery of IP packets within networks.
+	-> port 7
 * DNS(domain name system) :
+	-> translate human-friendly domain names to numerical IP addresses (such as 192.0.2.1) that computers use to identify each other on the network.
 	-> when we type www.google.com, http protocol take that url and find the IP address of goofle through DNS.
 	-> mail.google.com. here, mail -> sub-domain, google -> second-level domain, .com -> top level domain
 	-> top level domains -> .com, .io, .org, .edu
 
 * 3-WAY HANDSHAKE PROTOCOL :
-	-> client send (SYN) and (SEQ.NO) and to server.
-	-> server send (ACK), (SEQ.NO) and (ACK.NO) to client. here, ack.no = (seq.no + 1)
-	-> client send (ACK), (SEQ.NO) and (ACK.NO) again to server.  
+	-> client send (SYN) and (SEQ.NO) and to server. ---> send syn
+	-> server send (ACK), (SEQ.NO) and (ACK.NO) to client. here, ack.no = (seq.no + 1) --- send syn+ack
+	-> client send (ACK), (SEQ.NO) and (ACK.NO) again to server.--- send ack
 
 * IP ADDRESS :
 	-> every single device in internet to talk to each other they have ip adress.
@@ -89,10 +160,47 @@ PROTOCOLS : (rules setup by someone, how a particular data to be sent)
 		* C = 192.0.0.0 - 223.255.255.255
 		* D = 224.0.0.0 - 239.255.255.255
 		* E = 240.0.0.0 - 255.255.255.255 
-	-> Subnet masking -> masking the network part of IP address and leave us to use the host part 
-	-> IPV4 -> 32 bit, 4 words
-	-> IPV6 -> 128 bits,8 words all are hexadecimal .Not backward compatible, IPS's would have to shift and lot of hardware works. 
+	-> IPV4 -> 32 bit, 4 octets each 8 bits.
+		
+		* PRIVATE ADDRESS :
 
+		IPv4 Class	Private IPv4 Start Address	Private IPv4 End Address
+		    A			10.0.0.0		   10.255.255.255
+		    B			172.16.0.0		   172.31.255.255
+		    C			192.168.0.0	           192.168.255.255
+
+		* SPECIAL ADDRESS : 127.0.0.1 to 127.255.255.255 are network testing addresses also known as loopback addresses are the special IP address.
+		
+	-> IPV6 -> 128 bits,8 words all are hexadecimal .Not backward compatible, IPS's would have to shift and lot of hardware works.
+
+* IPV4 VS IPV6 :  
+	-> length : 32bits, 128 bits
+	-> representsation : dotted with 4 decimal numbers, colons with 4 hexadecimal 
+	-> running out due to rapid growth of internet, developed by providing vast space
+	-> header : 20bytes, 40 bytes
+	-> quality of support : limited, more
+	-> security : lack, secure
+	-> deployment : dominant and widely used, slower but rapdily increasing.
+
+* MAC ADDRESS (media access control) :
+	-> It is a 48-bit or 64-bit unique identifier of devices in the network. 
+	-> It is also called the physical address embedded with Network Interface Card (NIC) 
+	-> It refers to a unique identifier assigned to network interfaces for communications at the Data Link Layer (Layer 2) of the OSI model.
+	-> allow devices to identify and communicate with each other within a local network.
+
+* MAC VS IP :
+	-> 6 or 8 byte hexadecimal, 4 or 16 byte
+	-> retrieved by ARP , retrieved by RARP
+	-> NIC provides MAC address, ISP provides IP address
+	-> ensure physical address of computer, ensure logical address of computer
+	-> operates in datalink layer, operates in network layer
+	-> used to identify device, ued to identify connection of device on network.
+	-> cannot be changed, can be changed
+	-> can't be easily found by third-party,can be easily found by third-party 
+	-> no classes, 5 classes
+	-> hadware oriented, software oriented.
+
+* Troubleshooting -> process of identifying, diagnosing, and resolving problems or issues within a system, network, device, or process.
 
 STATUS CODES :
 ---------------
@@ -109,29 +217,97 @@ COOKIES :
 * whenever new request sent in HTTP, the header contains cookies and server comes to know who is contacting.
 * third-party cookies -> cookies that are set for the URL's that we do not vists.
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------
+SUBNET :
+--------
+* A subnet is a network inside a network achieved by the process called subnetting which helps divide a network into subnets.
+* It is used for getting a higher routing efficiency and enhances the security of the network. 
+* It reduces the time to extract the host address from the routing table.
+
+SUB-NET MASKING :
+-----------------
+* a subnet mask is a number that resembles an IP address and it reveals how many bits in the IP address are used for network by masking the network portion of IP address.
+* convert it into binary number.
+* 1's in the subnet mask indicates the network address and 0's indicate host address. 
+
+	00110101 11100010 00000001 00000000
+	11111111 11111111 00000000 00000000
+
+	first 2 - network, last 2 - host. since , it matches all one
+
+* CLASS		FIRST OCTET ADDRESS	DEFAULT SUBNET MASK
+    A		      1 - 127	             255.0.0.0
+    B		     128 - 191	            255.255.0.0
+    B		     192 - 223	           255.255.255.0
+
+* CIDR(classless inter-domain routing) / slash notation -> 192.168.1.0/24 means this ip has 24 1's in it.
+
+
+
+Q.)Why IP address has network and host part ?
+	-> manageability, to break down larger network to smaller networks or subnetworks, which is called as subnetting
+
+
+What happens when you enter google.com in the web browser :
+-------------------------------------------------------------
+* Check the browser cache first if the content is fresh and present in cache display the same.
+* If not, the browser checks if the IP of the URL is present in the cache (browser and OS) if not then request the OS to do a DNS lookup using UDP to get the corresponding IP address of               
+  the URL from the DNS server to establish a new TCP connection.
+* A new TCP connection is set between the browser and the server using three-way handshaking.
+* An HTTP request is sent to the server using the TCP connection.
+* The web servers running on the Servers handle the incoming HTTP request and send the HTTP response.
+* The browser process the HTTP response sent by the server and may close the TCP connection or reuse the same for future requests.
+* If the response data is cacheable then browsers cache the same.
+* Browser decodes the response and renders the content.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 TYPES OF NETWORK :
 ------------------
- i) LAN :
+ i) PAN :
 ---------
-* Local area network.
-* small house/office.
-* ethernets, wifi
+* personal area network.
+* 1m distance.
+* let devices connect and communicate over the range of the person
+* bluetooth
 
-ii) MAN :
+ii) LAN :
 ---------
-* Metropolitan Area network.
-* accross cities.
+* Local Area network.
+* 10m,100m,1km
+* privately owned that operates within Room, building, campus
+* printers,fax machines
 
-iii) WAN :
+iii) MAN :
 ----------
-* Wide area network
-* accross countries
+* Metropolitan area network
+* 10Km
+* accross cities
+* tv cable connection
+
+iv) WAN :
+---------
+* wide area network
+* 100KM, 1000KM
+* accross country, continent 
 * through optical fibre cables.
 * SONET -> Synchronous optical networking(carries data using optical fibre cables to cover large distances)
 * FRAME RELAY -> a way to connect LAN to WAN
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------
+v) GAN :
+--------
+* Global area network
+* 10,000KM
+* across planet
+* internet that connects globe using satellites
+* also called network of WAN's
+
+vi) VPN :
+---------
+* virtual private network
+* private WAN built on internet
+* confidential data transmission 
+* VPN encrypts the internet traffic and disguises the online identity.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 COMPONENTS OF NETWORK :
 -----------------------
@@ -142,9 +318,12 @@ i) MODEM :
 
 ii) ROUTER :
 ------------
-* a device like switch that routes the data packets based on the IP addresses.
+* The router is a networking device used for connecting two or more network segments.
+* It directs the traffic in the network.
+* It transfers information and data like web pages, emails, images, videos, etc. from source to destination in the form of packets.
 * network layer device.
 * conncet LAN and WAN and have dynamicall updating routin table based on which they make decisions on routing data packets.
+* data can only be sent between 2 similar networks. this is how router differs from the gateway
 
 iii) REPEATER :
 ---------------
@@ -172,25 +351,46 @@ vi) SWITCH :
 ------------
 * multiport bridge with buffer and design to boost its efficiency and perfomance.
 * data link layer.
-* do error checking before dorwarding data to transmit only good data to correct ports.
+* do error checking before forwarding data to transmit only good data to correct ports.
 
 vii) GATEWAY :
 --------------
 * connect to network together.
 * work as messenger agents, collect data from one system, interpret it and transmit ot another system
 * called protocol converters and operate at network layer.
-* more complex than switch and router,
+* more complex than switch and router
+* data can also be sent between 2 disssimilar networks. this is how gateway differs from the router.
+
 
 viii) BROUTER :
 ---------------
-* bridgin router.
+* bridging router.
 * work either at data link/network layer.
 * filter LAN traffic
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------
+ix) BROADCAST :
+---------------
+* in large organization, when a computer wants to communicate with other, it should know how and where to communicate, it is done by broadcast. 
+* Broadcast is when computersends out data to all computers on a network , so it can locate and talk to certain computers.
+* problem is it make all computers to broadcast and it become slow down network and cause broadcast traffic.
+* to prvent this network should be broken down using routers. so, broadcast could not go pass the routers , they stay within it.
+* if differenct computer wants to connect, then connection flow from computer-gateway-router-router-gateway-computer
+
+HUB VS SWITCH :
+---------------
+* operates at physical layer, data link layer
+* half-duplex transmission mode, full-duplex transmiison
+* ethernet devices can be connected, lan devices can be connected
+* cheaper, expesnive
+* no software support for administration , present
+* less speed upto 100mbps, high speed in gbps
+* less efficient, more efficient
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 TOPOLOGIES :
 ------------
+Network topology is a physical layout of the network, connecting the different nodes using the links.
 
 i) BUS :
 --------
@@ -204,9 +404,10 @@ i) BUS :
 
 ii) RING :
 ----------
-* computer connceted in ring each other.
+* computer connceted in ring with exacctly 2 ddeviceseach other.
 * every sytem communicates with one another.
 * if one cable break, data transfer failed, unecessary calls(for A-F, it should go through all)
+* exxpnsive
 
 				A - B
 			      /      \
@@ -227,64 +428,86 @@ iii) STAR :
 iv) TREE :
 ----------
 * combination of bus and star.
+* also known as extended bu topology
+* if main bus fails, network is damaged
 
 v) MESH :
 ---------
 * every single computer is connected to every singl computer
-* expensive, less scalable,
+* expensive, less scalable,installation and managemment or difficult
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------
+vi) HYBRID :
+------------
+* combination of different topologies to form a new topology
+* It helps to ignore the drawback of a particular topology and helps to pick the strengths from other.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 OSI MODEL : (open systems interconnection) 
 ----------
 
-						APPLICATION LAYER ---------- IMPLEMENTATION (HTTP,DNS,TELNET)
+					     |	APPLICATION LAYER ---------- IMPLEMENTATION - Gateway, firewall, pc and all end devices like phones, servers
+		SOFTWARE                     |	     	|
+			LAYERS		     |	PRESENTATION LAYER --------- ENCRYPTION (SSL) - Gateway, firewall, pc
+					     |		|
+					     |	  SESSION LAYER ------------ AUTHENTICATION, AUTHORIZATION () - Gateway, firewall, pc
 							|
-						PRESENTATION LAYER --------- ENCRYPTION (SSL)
+		Heart of OSI        ----------	TRANSPORTATION LAYER ------- SEGMENTATION - Gateway, firewall
 							|
-						  SESSION LAYER ------------ AUTHENTICATION, AUTHORIZATION ()
-							|
-						TRANSPORTATION LAYER ------- SEGMENTATION (UDP,TCP)
-							|
-						  NETWORK LAYER ------------ LOGICAL IP ADDRESSONG (IPV4,IPV6)
-							|
-						   DATALINK LAYER ---------- MAC ADDRESSING 
-							|
-						  PHYSICAL LAYER ------------ RAW DATA
+					     |	  NETWORK LAYER ------------ LOGICAL IP ADDRESSONG - Routers, brouters, 3 layered switches
+	Hardware			     |		|
+		Layers			     |	   DATALINK LAYER ---------- MAC ADDRESSING - Bridges, modems, network cards, 2 layered switches
+					     |		|
+					     |	  PHYSICAL LAYER ------------ RAW DATA - Hubs, repeaters, cables, fibres, wireless
 
 i) APPLICATION LAYER :
 ----------------------
+* unit exhanged - APDU(application protocol data unit)
+* Protocol - HTTP, SMTP, FTP, SSH, DNS	
 * implementeed in software
 * web browsers.
 
 ii) PRESENTATION LAYER :
 ------------------------
+* unit exhanged - PPDU(presentation protocol data unit)
+* Protocol - no protocols used
 * take data from application layer and convert it into binary format -> encryption, abstraction
 
 iii) SESSION LAYER :
-------------------------	
+------------------------
+* unit exhanged - SPDU(session protocol data unit)
+* Protocol -  Not as commonly associated with specific protocols, often handled by application layer protocols.	
 * helps in setting and managing connections and it enables send and recieve of data -> authentication, authorization	
 
 iv) TRANSPORTATION LAYER :
-------------------------	
+------------------------
+* unit exhanged - TPDU(transaction protocol data unit)
+* Protocol - TCP, UDP	
 * data recieved from session layer convered into small segments that segments contain source,destination port number and sequence number
+* it takes care of segmentation and reassembly.
 
 v) NETWORK LAYER :
 ------------------
+* unit exhanged - packets
+* protocol - IP, ARP(Address resolution protocol)->communication protocol to map the IP address to the MAC address, ICMP(Internet control message access protocol) -> control message and report error.
 * transmission of recieved data segments from one computer to other computer that is llocated in different network. here router comes. IP address used for  data packets to reach correct destination
+* it takes care feedback messaging through ICMP and it contrls the operation of subnet.
 
 vi) DATALINK LAYER :
 ------------------
+* unit exhanged - frames
+* protool - PPP(point-to-point) -> to establish direct connection between two nodes
 * allows directly communicate with hosts, recieve data packets from network layer and it contains IP address of host and destination.
-* MAC -> media access control
+* allow detecting damaged packets using CRC(cyclic redundancy check)
 
 vii) PHYSICAL LAYER :
 ---------------------
-* transmits bits, electric signals, cables
-* raw data
+* unit exhanged - bits
+* protocol - ethernet
+* transmit raw data, choose mode of transmisson of data whether full-duplex or half-duplex
 				
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 TCP/IP MODEL :
 -------------
@@ -296,15 +519,15 @@ TCP/IP MODEL :
 							|
 						TRANSPORTATION LAYER ------- SEGMENTATION (UDP,TCP)
 							|
-						  NETWORK LAYER ------------ LOGICAL IP ADDRESSONG (IPV4,IPV6)
+						  INTERNET LAYER ------------ LOGICAL IP ADDRESSONG (IPV4,IPV6)
 							|
-						   DATALINK LAYER ---------- MAC ADDRESSING 
-							|
-						  PHYSICAL LAYER ------------ RAW DATA	
+						   LINK LAYER -------------- DATA TRANSMISSION (  
+							
 
 
 i) APPLICATION LAYER :
 ----------------------
+* protocols - HTTP, FTP ,SMTP, DNS
 * users interaction (whatsapp,instagram) on devices
 * collection of servers -> data centres
 * ping -> it measures the round trip time for message send from host to destination and code back, this entire known as ping time
@@ -314,20 +537,137 @@ i) APPLICATION LAYER :
 
 ii) TRANSPORT LAYER : 
 ---------------------
+* protocols - TCP, UDP
 * transfer of data from network to application, datas are in segments.
 * also takes care of conogestion control -> manages traffic, by congestion contol algorithms.
 * take care of CHECKSUM -> calculating a value using the data through some algorithm.
 * timers -> to know datas are correctly reached destination
 
-iii) NETWORK LAYER :
+iii) INTERNET LAYER :
 ---------------------
+* protocols - IP, ICMP, ARP, DHCP
 * transfer of data from one computer to another computer.
 * datas are in packets that contains network layer address of the destination.
+* perform error reporting and logical  addressing.
 
-iv) DATALINK LAYER :
---------------------
-* it is responsible for transferrig the data packets rev=cieeved from the network layaer over a physical link.
-* 
- 
+iv) LINK LAYER :
+-----------------
+* protocols - Ethernet, PPP, Wifi
+* transmission of data between devices on same internet segment.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+OSI VS TCP/IP :
+---------------
+* number of layers - 7,4
+* layer names 
+* flexibility - flexible, not flexible
+* adoption - less commonly used, widely used
+* fixed boundaries, no boundaries
+* vertical layer approach , horizontal layer approach
+* low reliabile, high reliable
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+* UNICAST : If the message is sent to a single node from the source then it is known as unicasting. This is commonly used in networks to establish a new connection.
+* ANYCAST : If the message is sent to any of the nodes from the source then it is known as anycasting. It is mainly used to get the content from any of the servers in the Content Delivery            
+  System.
+* MULTICAST : If the message is sent to a subset of nodes from the source then it is known as multicasting. Used to send the same data to multiple receivers. 
+* BROADCAST : If the message is sent to all the nodes in a network from a source then it is known as broadcasting. DHCP and ARP in the local network use broadcasting.
+
+UNICAST VS BROADCAST VS MULTICAST :
+-----------------------------------
+* definition : message from one-one, message from one-many, message from one-group of recievers.
+* Transmission : data sent to single  reciepent, all, group.
+* Addressing : unique destination address, special broadcast address, special multicast address.
+* Delivery : Guaranteed delivery, not all devices interested, not all devices interested.
+* security : more,less,moderate
+* latency : low,high,moderate
+* traffic : least, high, moderate
+* examples : email,dhcp requests, online gaming
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+NETWORK UTILITIES :
+-------------------
+* PING :
+	-> used to test reachability of a host on an IP network and to measure the round-trip time for the messsages sent from host-destination.
+	-> ping google.com
+
+* IPCONFIG : 
+	-> Windows command-line utility used to display the configuration of network interfaces on a system
+	-> It provides information such as IP addresses, subnet masks, default gateways, DNS servers.
+	->ipconfig
+
+* TRACERT :
+	-> used in windows whereas traceroute is used in linux and mac os
+	-> trace the path that packets take from the source to the destination.
+	-> tracert google.com
+
+* NSLOOKUP :
+	-> used to query DNS (Domain Name System) servers to obtain domain name or IP address information.
+	-> nslookup google.com
+
+
+* NETSTAT :
+	-> Displays network connections, routing tables, interface statistics, masquerade connections, and multicast memberships.
+	-> for active network connections(netstat -a), active tcp connections(netstat -at), display routing tables(netstat -r)
+
+IPCONFIG VS IFCONFIG :
+----------------------
+* internet protocol configuration , interdace configuration
+* Command used in Microsoft operating systems to view and configure network interfaces, Command used in MAC, Linux, UNIX operating systems to view and configure network interfaces
+* both are used to get the TCP/IP summary and allows to changes the DHCP and DNS settings
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+FIREWALL :
+----------
+* The firewall is a network security system that is used to monitor the incoming and outgoing traffic and blocks the same based on the firewall security policies.
+* It acts as a wall between the internet (public network) and the networking devices (a private network).
+* It is either a hardware device, software program, or a combination of both. It adds a layer of security to the network.
+* Before Firewalls, network security was performed by Access Control Lists (ACLs) residing on routers.
+* ACLs are rules that determine whether network access should be granted or denied to specific IP address.
+* But ACLs cannot determine the nature of the packet it is blocking. Also, ACL alone does not have the capacity to keep threats out of the network.
+* Hence, the Firewall was introduced. Firewall match the network traffic against the rule set defined in its table.
+	-> first gen - packet filtering firewall
+	-> second gen - stateful inspection firewall
+	-> third gen -  Application Layer Firewall 
+	-> next generation firewall
+
+
+ANTIVIRUS :
+-----------
+* Antivirus is an application or software which provides security from the malicious software coming from the internet.
+
+FIREWALL VS ANTIVIRUS :
+-----------------------
+* implemented in both hadware and software, software
+* deals with external threats only, both internal and external
+* counter attacks are possible such as ip spoofing, no counter attacks after removing malware.
+* works on monitoeing and filtering, scanning infeted files
+* checks threats from incominig packets, checks threats from malicious spftware
+* saves system from all kind of attacks, saves only from virus 
+* complex programming, simple.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Stable Internet but google.com doesn't work :
+----------------------------------------------
+* check connetivity to other websites : verify if other websites like facebook, youtube are accessibble to ensure its not connectivity issue.
+* test connectivity if google's ip address :try accessing google's ip address directly.
+* verify dns resolution : through nslookup or dig command query dns servers for ip address of google.com, if fails try troubleshoot dns settings on network.
+* flush dns cache : erify that the hosts file on the local machine does not contain any entries redirecting Google.com to a different IP address.
+* test google.com with other devices
+* checking firewall and other security software for blocking or accessing
+* verifying https connections are not blocked.
+* checking service outage from downdetector.com or outage.report.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 
 
