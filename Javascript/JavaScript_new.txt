@@ -1,0 +1,130 @@
+										JAVASCRIPT
+									    ------------------
+* comment -> //
+* js was originally decided to run only in browsers called js engine execute code.(netflix,paypal)
+* in 2009, engineer tyan dahl toop open-source js engine and embedded in c++ program called node. Node is c++ program that includes google's v8 js engine.
+* node is a runtime environment for executing a js code.
+* js vs ecmascript : 
+	1. ecmascript is just specification, whreas js is a prog lang that confirms this specification.
+	2. first ecmascript was in 1997, 2015,2016.
+
+* script can be declared anywhere in the head or body , but it is good to declare in body at last.Because, if it is in head, to execute the js code browser will be busy and can't render content of the page.
+
+* console.log() -> loging a cotent, inbetween single quotes in string.
+* semicolon must at end.
+* before we used var, but now let is used.
+* Datatypes -> primitive, refernce
+* Primitive -> String, number, boolean, undefined, null
+* referencce -> obect, array, function
+* programming languge - static, dynamic
+* static -> variable stype cannot be changed, dynamic -> variable type can be changed and done at runtime.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+IMPORTANT OPERATIONS : 
+
+~ slice(start,end) -> returns elements in range
+~ substring(start, end) -> returns elements in range
+~ substr(start, length) -> returns the total length element from start
+~ push -> push element at last in array
+~ pop -> pop last elements in array
+~ shift -> removes first element in array( a place is replaced by b)
+~ unshift -> adds new element in front
+~ delete -> delete array element and make it as empty element
+~ splice(start,no of element to be deleted, untill how many element) -> delete and replace the next element in the previous place
+~ splice(1,2,'X','Y') -> replacing the deleted element
+~ splice(1,0,'b') -> replacing the element in index 1 without deleting anything
+~ array.join() -> every element in array will be string seperated by a comma(,)
+~ str.split -> string will be array
+~ spread(...arrayName) -> join two diiferent arrays.
+
+~ Map function (x => x.age) -> will create new array and store elements
+~ filter -> returns new array by checking each value of originial array using call back fn
+~ reduce -> reduce the element size arr.reduce(total,el)
+~ flat() -> reduces 2D array to 1D array
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+object :
+--------
+* {} -> object literal
+* for every line comma(,) is necessary
+* can read the value boy two ways -> dot notation(object.name) and bracket notation ['name']
+* object has key value pairs
+
+Strings :
+----------
+* old way is concatenating it
+* new way is using template literals (`My name is ${name} and age is ${age}`
+
+Arrays :
+--------
+* [] -> array literal
+* array is an object in js
+* JSON -> js object notation, the diff btn json and array is json has double quotes for every key and for string values.
+* to convert datas to json -> JSON.stringify(arrayName)
+
+Loops :
+--------
+* asusual for, while
+* for loop can be like -> for(let i=0;i<10;i++) , for(i of todos) and arrayName.forEach(function(i, index) {} ) -> this just  itersste till the ened of the array.
+
+Comparision :
+-------------
+* == -> check for value
+* === -> check both value and tyes
+
+Functions :
+-----------
+* functions -> set of statements that performs task or calculates a value.
+* syntax -> function(){}
+* parameter -> is the element that the function passes inside at the time of declaration.
+* Argument -> actual value that is used to call the function
+
+* arrow functions -> for convinient, syntax -> const functionName = (parameters) =>{} and call it below
+
+OOPS : 
+--------
+class Person{
+    constructor (firstName, lastName, dob){
+        this.firstName = firstName
+        this.lastName = lastName
+        this.dob = new Date(dob)
+    }
+}
+
+
+const person1 = new Person('Hemanth','Ravi','4-6-2003')
+const person2 = new Person('Kannan','Thana','2-7-2002')
+
+console.log(person1)
+
+* prototypes -> are the functions that we use in the function
+
+DOM :
+-----
+* tree stucture of the full code
+* selector -> getelement, queryselector, getelementbyclassname
+* to access html from js
+
+Math Functions :
+----------------
+* math.abs() -> give absolute value
+* math.round() -> give round of value
+* math.floor() -> ignore value after decimal
+* math.ceil() -> next number
+* math.sqrt() -> sqrt of number
+* math.pow(base,power) ->give value
+* math.min(a,b) and math.max(a,b)
+* math.random() -> from 0-1 random value
+* for dice with range 1-6 , then -> math.floor(()*6)+1
+* math.PI
+
+
+
+
+
+
+
+
+
+
+
