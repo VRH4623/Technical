@@ -1,0 +1,26 @@
+dom -> document object model
+
+~ slice(start,end) -> returns elements in range
+~ substring(start, end) -> returns elements in range
+~ substr(start, length) -> returns the total length element from start
+~ push -> push element at last in array
+~ pop -> pop last elements in array
+~ shift -> removes first element in array( a place is replaced by b)
+~ unshift -> adds new element in front
+~ delete -> delete array element and make it as empty element
+~ splice(start,no of element to be deleted, untill how many element) -> delete and replace the next element in the previous place
+~ splice(1,2,'X','Y') -> replacing the deleted element
+~ splice(1,0,'b') -> replacing the element in index 1 without deleting anything
+~ array.join() -> every element in array will be string seperated by a comma(,)
+~ str.split -> string will be array
+~ spread(...arrayName) -> join two diiferent arrays.
+
+~ Map function (x => x.age) -> will create new array and store elements
+~ filter -> returns new array by checking each value of originial array using call back fn
+~ reduce -> reduce the element size arr.reduce(total,el)
+~ flat() -> reduces 2D array to 1D array
+
+~ async -> simultaneous operatons, sync -> line by line execution
+~ promise ->deterining success or failure of an asyncchronous operation -> promise(resolve,reject)--------------(.then),(.catch)
+
+~ async function return promise and should contain await keywrd -> block the execution of other elements and wait untill the current element execution overed
