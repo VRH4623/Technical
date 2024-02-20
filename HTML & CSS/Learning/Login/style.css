@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(47, 99, 139);
+    background-image: url(bg2.jpeg);
+}
+
+.container {
+    text-align: center;
+    border: 30px rgb(162, 164, 107) solid;
+    margin: 100px;
+    background-image: url(bg.jpeg);
+    margin-bottom: 10px;
+}
+
+

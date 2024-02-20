@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CatPhotoAPP</title>
+    </head>
+    <body>
+        <h2>Cat Photo APP</h2>
+        <main>
+            <h3>Cat Photos</h3>
+        <p>Click here to view more <a href="https://www.google.com/search?sca_esv=5278b46dd4ebd301&rlz=1C1KDEC_enIN1066IN1066&q=cat+photos&tbm=isch&source=lnms&sa=X&ved=2ahUKEwixmp2nr6eEAxUqUWwGHehWAboQ0pQJegQIDBAB&biw=767&bih=728&dpr=1.25" target="_blank">
+        Cat photos</a>.</p>
+        <br>
+        <img src="cat1.jpg" alt="A cat's sunbath." >
+        <h3>Cat Lists</h3>
+        <div class="lists">
+            <p>Things Cat <em> Love </em>:</p>
+            <ul>
+                <li>Cat Nip</li>
+                <li>Laser Pointers</li>
+                <li>Lasagna</li>
+            </ul>
+            <img src="lasagna.jpg" alt="lasagna" height="300">
+            <p>Things Cat <strong>Hates </strong>: </p>
+            <ol>
+                <li>Flea Treatment</li>
+                <li>Thunder</li>
+                <li>Other Cats</li>
+            </ol>
+        </div>
+        <img src="cats.jpeg" alt="cats" height="250" width="350">
+        <form action="/submit-cat-photo">
+            <br>
+            <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor" checked>Indoor</label>
+            <br>
+            <label for="outdoor"><input id="outdoor" type="radio" name="indoor-outdoor" checked>Outdoor</label>
+            <br>
+            <label for="loving"><input id="loving" type="checkbox" name="personality">Loving</label>
+            <br>
+            <label for="lazy"><input id="lazy" type="checkbox" name="personality" checked>Lazy</label>
+            <br>
+            <label for="energetic"><input id="energetic" type="checkbox" name="personality">Energetic</label>
+            <br>
+            <input type="text" placeholder="cat photo URL" required>
+            <br>
+            <button type="submit">Submit</button>
+        </form>
+        </main>
+        <footer>
+            <p>No Copyright</p>
+        </footer>
+    </body>
+</html>
