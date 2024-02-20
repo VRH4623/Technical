@@ -1,0 +1,16 @@
+#text{
+    color: rgb(249, 16, 16);
+}
+
+#btn{
+    color: white;
+    background-color: blue
+}
+
+#btn:hover{
+    color: brown;
+}
+
+ul{
+    color: greenyellow;
+}
