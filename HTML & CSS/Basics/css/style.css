@@ -1,0 +1,15 @@
+*{
+    color:blue
+}
+h1,h3{
+    color:red
+}
+.soft{
+    color: blueviolet;
+}
+div>p{
+    color: brown;
+}
+div a{
+    color:chartreuse
+}
