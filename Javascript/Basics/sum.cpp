@@ -16,4 +16,4 @@ void admindroidMain(int size,int arr[][10],int weightageArray[][10]) // Do not m
         }
         weightageArray[j][1] = colWeightage;
     }
-}
+} 
