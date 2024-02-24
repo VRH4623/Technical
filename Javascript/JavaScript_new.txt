@@ -1,4 +1,4 @@
-										JAVASCRIPT
+										JAVASCRIPT 
 									    ------------------
 * comment -> //
 * js was originally decided to run only in browsers called js engine execute code.(netflix,paypal)
