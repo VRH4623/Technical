@@ -1,5 +1,5 @@
 BASICS : 
---------
+-------- 
 
 1. # - preprocessor(includes different files into the source code).
 2. #include<bits/stdc++.h> - include contents of header file into the code.
