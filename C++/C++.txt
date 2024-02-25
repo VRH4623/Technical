@@ -7,7 +7,7 @@ BASICS :
 4. c vs c++ - oops, in-built functions, flexible, memory management easy.
 5. macros - #define, text replacement, code simplification, defined in the header itself and use main thing alone in code.
 
-OOPS :
+OOPS : 
 -------
 
 1. oops - is a powerful paradigm for simplifying code complexity, for reusable code
