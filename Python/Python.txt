@@ -1,0 +1,15 @@
+											PYTHON
+										   ---------------
+
+
+* python interpreter - line by line execution
+* netflix, spotify.
+* IDE  - Integerated Development Environment
+* source code - code written in a file
+* to execute this code, we need a processor which is a electronic chip that has transistors, capactirs in it.
+* it understands only in 0 (or) 1, off (or) on.
+* for programmers easy, high level languages like python introduced.
+* while giving run - > python interpreter connverts over high level code into machine understandable code and send it to processor.
+* in-built function -> already written function like print
+* variable - to store information
+* 
