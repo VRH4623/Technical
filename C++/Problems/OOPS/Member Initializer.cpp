@@ -15,7 +15,7 @@ class Date{
             return to_string(day) + '/' + to_string(month) + '/' + to_string(year);
             // they are in integers to return as string we are converting it..
         }
-};
+}; 
 
 class Student{
     string name;
