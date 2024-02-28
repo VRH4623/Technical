@@ -6,7 +6,7 @@
 * Network -> computers connected together
 * Internet -> collection of computer networks.
 * WWW -> information system that has access to any documents or resources that are identified by uniform resource locators(url).
-* computers are conncected physically through -> optical fibre cables, coaxial cables. wireless -> bluetooth, wifi.
+* computers are conncected physically through -> optical fibre cables, coaxial cables. wireless -> bluetooth, wifi. 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 									ISP (internet service provider)
