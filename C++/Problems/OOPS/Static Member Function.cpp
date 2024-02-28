@@ -18,7 +18,7 @@ class Room{
         static int getroomsCount(){
             return roomsCount;
         }
-};
+}; 
 
 int Room::roomsCount=0;
 
