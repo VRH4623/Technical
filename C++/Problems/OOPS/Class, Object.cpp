@@ -12,7 +12,7 @@ class Room{
         int calculateArea(){
             return length*breadth;
         }
-};
+}; 
 int main(){
     Room r1;
     r1.getResult(50,100);
