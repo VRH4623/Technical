@@ -26,7 +26,7 @@
 
 											CSS
 										-----------------------
-comment -> /*hello*/
+comment -> /*hello*/ 
 
 * inline css -> diretly in html element (not sugested) :
     <h1 style="color: red;"> inline - Helllo World</h1>
