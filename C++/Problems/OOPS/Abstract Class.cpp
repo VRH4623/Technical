@@ -9,7 +9,7 @@ class Shape{ //abstractClass->useless class where it has no goal, but canbe used
         Shape(double a, double b){
             base = a;
             height = b;
-        }
+        } 
         virtual double area() = 0;//pure virtual function
 }; 
 
