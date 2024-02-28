@@ -18,3 +18,4 @@ int main(){
     r1.getResult(50,100);
     cout<<r1.calculateArea();
 }
+ 
