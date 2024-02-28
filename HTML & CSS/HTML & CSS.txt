@@ -18,7 +18,7 @@
 * checked is a attribute with no value, to autoselect a content for  every refresh.
 * div elements -> container for other elements, used in css for styling 
 * lang -> eng is to set the values used as englosh language.
-* id -> unique, class -> can reuse.
+* id -> unique, class -> can reuse. 
 
 
 
