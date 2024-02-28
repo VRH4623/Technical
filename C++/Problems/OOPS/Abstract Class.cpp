@@ -11,7 +11,7 @@ class Shape{ //abstractClass->useless class where it has no goal, but canbe used
             height = b;
         }
         virtual double area() = 0;//pure virtual function
-};
+}; 
 
 class Triangle : public Shape{
     public:
