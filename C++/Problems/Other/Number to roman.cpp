@@ -15,6 +15,6 @@ int main(){
         while(quo--){
             cout<<s[i];
         }
-        i--;
+        i--; 
     }
 }
