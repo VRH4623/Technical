@@ -1,6 +1,6 @@
 dom -> document object model
 
-~ slice(start,end) -> returns elements in range
+~ slice(start,end) -> returns elements in range 
 ~ substring(start, end) -> returns elements in range
 ~ substr(start, length) -> returns the total length element from start
 ~ push -> push element at last in array
