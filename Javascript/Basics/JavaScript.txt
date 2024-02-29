@@ -11,7 +11,7 @@ dom -> document object model
 ~ splice(start,no of element to be deleted, untill how many element) -> delete and replace the next element in the previous place
 ~ splice(1,2,'X','Y') -> replacing the deleted element
 ~ splice(1,0,'b') -> replacing the element in index 1 without deleting anything
-~ array.join() -> every element in array will be string seperated by a comma(,)
+~ array.join() -> every element in array will be string seperated by a comma(,) 
 ~ str.split -> string will be array
 ~ spread(...arrayName) -> join two diiferent arrays.
 
