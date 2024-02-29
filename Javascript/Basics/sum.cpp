@@ -5,7 +5,7 @@ void admindroidMain(int size,int arr[][10],int weightageArray[][10]) // Do not m
         for (int j = 0; j < size; ++j) {
             rowWeightage += arr[i][j];
         }
-        weightageArray[i][0] = rowWeightage;
+        weightageArray[i][0] = rowWeightage; 
     }
 
     // Calculate the weightage of columns
