@@ -3,7 +3,7 @@ using namespace std;
 
 class Shape{ //abstractClass->useless class where it has no goal, but canbe used in the derived class.(only pure virrtual functio)
 // no objects can be created for an abstract class.
-    public:
+    public: 
         double base;
         double height;
         Shape(double a, double b){
