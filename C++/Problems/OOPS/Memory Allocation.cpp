@@ -7,7 +7,7 @@ int main(){
     
     int *p2 = new int[20];
     
-    delete p;
+    delete p;  
     
     delete []p2;
     
