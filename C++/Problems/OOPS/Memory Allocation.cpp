@@ -11,5 +11,5 @@ int main(){
     
     delete []p2;
     
-    cout<<p2;
+    cout<<p2; 
 }
