@@ -18,7 +18,7 @@ class Count{
 void setx(Count &c, int x1){
     c.x = x1;
 }
-
+ 
 int main(){
    Count c1;
    setx(c1,10);
