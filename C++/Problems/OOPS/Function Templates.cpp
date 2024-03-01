@@ -14,7 +14,7 @@ class Room{
             }
             return max;
         }
-};
+}; 
 
 int main(){
     Room r1;
