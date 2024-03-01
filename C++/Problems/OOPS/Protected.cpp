@@ -10,7 +10,7 @@ class Employee{
         Employee(int eId, string n, double sal=0){
             empId = eId;
             name = n;
-            salary = sal;
+            salary = sal; 
         }
         void print(){
             cout<<empId<<endl<<name<<endl<<salary<<endl;
