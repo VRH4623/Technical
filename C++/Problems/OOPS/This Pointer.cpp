@@ -12,7 +12,7 @@ class Message{
         }
         string display(){
             return from;
-        }
+        } 
         
 };
 
