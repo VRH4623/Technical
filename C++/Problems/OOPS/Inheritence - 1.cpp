@@ -16,7 +16,7 @@ class Room{
         }
         int calculateArea(){
             return length*breadth;
-        }
+        } 
 };
 
 class Kitchen : public Room{
