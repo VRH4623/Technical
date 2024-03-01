@@ -18,7 +18,7 @@ using namespace std;
 
 // void square(int &b){
 //     b= b*b;
-// }
+// } 
 
 // int main(){
 //     int b=5;
