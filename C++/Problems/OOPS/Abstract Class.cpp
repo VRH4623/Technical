@@ -13,7 +13,7 @@ class Shape{ //abstractClass->useless class where it has no goal, but canbe used
         virtual double area() = 0;//pure virtual function
 }; 
 
-class Triangle : public Shape{
+class Triangle : public Shape{ 
     public:
         Triangle(double a, double b) : Shape(a,b) {}
         double area(){
