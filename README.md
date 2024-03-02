@@ -1,1 +1,1 @@
-Resume Technical Contents Overview
+Technical concepts mentioned in resume
