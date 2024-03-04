@@ -1,4 +1,4 @@
-BASICS : 
+BASICS :  
 -------- 
 
 1. # - preprocessor(includes different files into the source code).
