@@ -28,7 +28,7 @@ OOPS :
 
     B.) Runtime polymorphism - dynamic polymorphism. solved at runtime after compilation , like array out of scope int arr[4] and using arr[5].
 	
-	i) abstract class.
+	i) abstract class. 
 	ii) virtual functions.
 
 7. Function Templates - can be sued for function overoading, to avoid writing more code. template <Class T>
