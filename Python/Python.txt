@@ -21,7 +21,7 @@ https://docs.python.org/2.5/lib/contents.html
 	-> dvision
 	-> multiplication
 	-> addition
-	-> subtraction
+	-> subtraction 
 
 
 
