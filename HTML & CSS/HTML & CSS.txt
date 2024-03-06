@@ -1,6 +1,6 @@
  											HTML
 										-------------------
-
+ 
 
 * doctype -> defines the version of html
 * html -> latest html version
