@@ -23,7 +23,7 @@
 * Modem assigns IP addresses ussing the DHCP(Dynamic host configuration protocol)
 * any device send request like google.com to modem, it sends to isp. Later, google send response to isp and it returns the response to the router, and it decides who had the request using NAT(Network access translator)
 * IP address decides which device to send the data, but the application to send the data of the device is done through PORTS(Port numbers)
-* When two friends are communicating via internet, IP  address decides where computers are located, and port numbers denoting which application used to communicate.
+* When two friends are communicating via internet, IP  address decides where computers are located, and port numbers denoting which application used to communicate. 
 * Ports -> 16 bit numbers (16 cells, where every cell contains 0/1)
 * total port numbers possible are -> 2^16 (65000)
 * HTTP -> port 80
