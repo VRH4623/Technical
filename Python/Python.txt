@@ -21,7 +21,7 @@ https://docs.python.org/2.5/lib/contents.html
 	-> dvision
 	-> multiplication
 	-> addition
-	-> subtraction 
+	-> subtraction
 
 
 
@@ -80,7 +80,7 @@ STRING :
 * declaredminside double quotes
 * string[index] -> print the element tof the index
 * string[-1] -> print elements from last index
-* string[0:3] -> starting from index 0 to index 3, index 3 is excluded 
+* string[0:3] -> starting from index 0 to index 3, index 3 is excluded
 * string[1:] -> from start to full
 * strinng[:4] -> from start to 4
 * string[:] -> here, it will include 0 as first index
