@@ -90,3 +90,44 @@ STRING :
 	* for shorter syntax than string concatenation
 	* like template literals in c++
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+LISTS :
+-------
+* declared in square bracket
+* list.append() -> add an element at last
+* list.insert(index, elemennt) -> insert the given element in the given index
+* list.pop() -> pop the last element from the list
+* list.remove(element) -> removes an element
+* list.clear() -> removes all element from the list
+* list.index(element) -> returns theindex of the element
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TUPLES :
+--------
+* does not support item assignment(immutable)-> we can reassin a vaalue to the tuple object.
+* declared in paranthesis.
+* numbers = (1,2,3)
+  numbers[0] = 10
+  print(numbers[0])
+	 |
+  this is not applicable
+
+UNPACKING : 
+* assigning values for ach variables automatically from the tuple
+* unpacking tuples into differenct variables
+* x,y,z = cordinates(1,2,3)
+* can be used to do through ists also
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+DICTIONARIES :
+--------------
+* we can store bunch of key value pairs
+* decalred inide curly braces
+* key should not be repeated
+* accessing them by using the dicttionary name followed by square bracket
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
