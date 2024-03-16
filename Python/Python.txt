@@ -131,3 +131,19 @@ DICTIONARIES :
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+FUNCTIONS :
+-----------
+* def -> keyword called define where the interpreter knows that we are declaring a function
+* syntax -> def fnname():
+* fn call should be done only after defining it.
+* by defult all functions in pytjon return none
+* result can be done by using return statement
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+EXCEPTIONS :
+------------
+*  instead of making program crash , make the code to print the proper error message
+* try except is used to handle errors
+* code in try and if error catch in exception and content inside exveption prints.
+* 
