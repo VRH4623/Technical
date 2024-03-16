@@ -146,4 +146,28 @@ EXCEPTIONS :
 *  instead of making program crash , make the code to print the proper error message
 * try except is used to handle errors
 * code in try and if error catch in exception and content inside exveption prints.
+* for multiple exceptions we can use more except commands
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+COMMENTS :
+----------
+* ceomments can be done either by (#hi) or ('''hi''')
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+							
+										     OOPS
+										  __________
+
+CLASSES :
+---------
+* class is blueprint for creating objects
+* defined by class keyword followed by class name
+* as soon as we open paranthesis, pycharm gives automatically a  special keyword self
+* object is an instance of class
+* to create object type name of class and call it as a function.
+
+CONSTRUCTORS :
+--------------
+* constructor is a function thagt gets called at creating an object
 * 
