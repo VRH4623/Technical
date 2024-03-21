@@ -47,7 +47,7 @@ METHODS :
 	* format() -> Formats specified values in a string
 	* format_map() -> Formats specified values in a string
 	* index() -> Searches the string and returns the position of where it was found
-	* rindex()
+	* rindex()      
 	* isalnum() -> Returns True if all characters in the string are alphanumeric
 	* isindentifier -> Returns True if the string is an identifier
 	* isspace() -> Returns True if all characters in the string are whitespaces
@@ -151,13 +151,45 @@ EXCEPTIONS :
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 COMMENTS :
-----------
+----------SSS
 * ceomments can be done either by (#hi) or ('''hi''')
 
+MODULES :
+---------
+* it is like importing a file into andother file.
+* keyword import
+* instead oof imprting whole file , we can import special function alone.
+* when we import it, we dont need to add module name and dot in the prefix
+* each file is called module
+* 2 ways of importing -> impoting entire file or import speciffic function
+
+PACKAGES :
+----------
+* container for multiple modules
+* directory or folder
+* when python see a file name called (__init__.py) in a directory, then treat that directory as a package.
+* package > module > function
+
+RANDOM VALUE :
+--------------
+* random -> all type of random values
+* randint -> random values in a given range
+* PEP -> python enhancement proposal
+* PEP8 -> latest pep version
+
+FILES & DIRECTORIES :
+----------------------
+* pathlib -> objecct oriented file system path
+* provides classes that is used to create objects
+* from pathlib import Path -> path class is imported from pathlib module. here, Path "P" is capitalised as it is a class.
+* path.exists() -> check if the directory is there or not
+* path.mkdir -> create directory
+* path.rmdir -> reoves directory
+* path.glob() -> search for files and directories in the current path. argument should be passed for searching in the given pattern
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 							
 										     OOPS
-										  __________
+									  __________
 
 CLASSES :
 ---------
@@ -170,4 +202,9 @@ CLASSES :
 CONSTRUCTORS :
 --------------
 * constructor is a function thagt gets called at creating an object
-* 
+* def init for initialise -> function that called when we create new point object
+
+INHERITANCE :
+------------
+* syntax -> class derived(base)
+* pass keyword -> for skipping
